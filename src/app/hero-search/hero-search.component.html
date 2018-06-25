@@ -7,8 +7,8 @@
   <table class="idListTable">
     <tr *ngFor="let hero of heroes | async">
       <th class="listElement">
-          <span class="badge" routerLink="/detail/{{hero.id}}">{{hero.id}}</span>
-          {{hero.name}}
+        <span class="badge" routerLink="/detail/{{hero.id}}">{{hero.id}}</span>
+        {{hero.name}}
       </th>
     </tr>
   </table>

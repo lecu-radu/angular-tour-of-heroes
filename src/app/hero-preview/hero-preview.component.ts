@@ -2,8 +2,6 @@ import {Component, Input} from '@angular/core';
 import {Hero} from '../heroes/hero';
 import {HeroService} from '../hero.service';
 import {Location} from '@angular/common';
-import {catchError, tap} from 'rxjs/operators';
-import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-hero-preview',
