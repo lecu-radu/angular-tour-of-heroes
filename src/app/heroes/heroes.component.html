@@ -1,11 +1,5 @@
 <h2>My Heroes</h2>
-
-
-<div class="heroes">
-
-</div>
-
-<table class="heroes">
+<table class="idListTable">
   <tr>
     <th><input class="listElement" #heroName placeholder="name"/></th>
     <th>
@@ -13,13 +7,10 @@
     </th>
   </tr>
   <tr *ngFor="let hero of heroes"
-      [class.selected]="hero === selectedHero"
-      (click)="onSelect(hero)">
-    <th>
-      <div class="listElement">
+      (click)="onSelect(hero)" >
+    <th class="listElement" [class.selected]="hero === selectedHero">
         <span class="badge" routerLink="/detail/{{hero.id}}">{{hero.id}}</span>
         {{hero.name}}
-      </div>
     </th>
     <th>
       <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
